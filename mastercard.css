@@ -1,0 +1,223 @@
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black-demi);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root{
+    --black: rgb(22, 22, 22);
+    --black-demi: rgb(48, 48, 48);
+    --white: white;
+    --gold: gold;
+    --orange: orange;
+    --red: red; 
+}
+
+.container{
+    height: 400px;
+    width: 400px;
+    margin-top: 80px;
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mastercard{
+    height: 200px;
+    width: 350px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--black);
+    background-color: var(--black);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.8s;
+    perspective: 1000px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.mastercard::before{
+    content: '';
+    position: absolute;
+    background: transparent;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    transition: all 0.3s linear;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+.mastercard:hover::before{
+    width: 200%;
+}
+
+.mastercard:hover{
+    transform: rotateY(180deg);
+    background-color: var(--black);
+}
+
+.container_left{
+    height: 95%;
+    width: 70%;
+    margin-top: 2px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_puce{
+    height: 30px;
+    width: 35px;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_puce{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_code{
+    height: 30px;
+    width: 90%;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_valid{
+    height: auto;
+    width: 70px;
+    font-size: 10px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--white);
+    margin-top: 10px;
+    margin-left: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_date{
+    height: auto;
+    width: 50px;
+    font-size: 12px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_name{
+    height: auto;
+    width: 90px;
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 10px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_right{
+    height: 95%;
+    width: 50%;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text_mastercard{
+    height: 20px;
+    width: 100px;
+    overflow: hidden;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: translateY(-30px) translateX(30px);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container_wifi{
+    height: 30px;
+    width: 30px;
+    transform: translateY(0px) translateX(100px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_wifi{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(90deg);
+}
+
+.container_mastercard{
+    height: 45px;
+    width: 45px;
+    transform: translateY(40px) translateX(85px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_mastercard{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
